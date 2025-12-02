@@ -9,43 +9,6 @@ Frontend Web (Next.js) – Giao diện cho người dùng
 
 AI Service – Xử lý NLP / tự động gợi ý nội dung (chưa kích hoạt)
 
-📂 Project Structure
-CNPM/
-│
-├── backend-python/        # Backend chính – FastAPI
-│   ├── app/
-│   │   ├── main.py
-│   │   ├── database.py
-│   │   ├── models/
-│   │   ├── schemas/
-│   │   ├── services/
-│   │   ├── security/
-│   │   └── __init__.py
-│   └── requirements.txt
-│
-├── frontend/              # Frontend web – Next.js + TailwindCSS
-│   ├── app/
-│   ├── components/
-│   ├── public/
-│   ├── services/
-│   └── utils/
-│
-├── ai-service/            # Python AI module (NLP, ML…)
-│   ├── app/
-│   ├── models/
-│   ├── services/
-│   └── tasks/
-│
-├── database/              # SQL schema + seeds
-│   ├── migrations/
-│   └── seeds/
-│
-└── docs/                  # UML, SRS, API docs, thiết kế hệ thống
-    ├── requirements/
-    ├── design/
-    ├── api/
-    └── testing/
-
 🛠️ Technologies Used
 
 Backend: Python FastAPI, SQLAlchemy, JWT
