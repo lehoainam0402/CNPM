@@ -1,92 +1,115 @@
-# 📘 CNPM – Syllabus Management & Digitalization System (SMD)
+📘 CNPM – Syllabus Management & Digitalization System (SMD)
 
-Dự án xây dựng hệ thống **quản lý và số hóa giáo trình (SMD)** bao gồm nhiều thành phần: Backend, Frontend, Mobile App và AI Service. Mục tiêu là tạo nền tảng tập trung giúp giảng viên, bộ môn và sinh viên tra cứu – cập nhật – duyệt syllabus một cách hiệu quả.
+Hệ thống quản lý và số hóa giáo trình (SMD) hỗ trợ giảng viên và khoa trong việc tạo – duyệt – tra cứu syllabus.
+Dự án gồm 3 phần chính:
 
----
+Backend Python (FastAPI) – Authentication, API chính
 
-## 📂 Project Structure
+Frontend Web (Next.js) – Giao diện cho người dùng
 
-```
+AI Service – Xử lý NLP / tự động gợi ý nội dung (chưa kích hoạt)
+
+📂 Project Structure
 CNPM/
 │
-├── backend/           # Java Spring Boot backend service
-├── ai-service/        # Python FastAPI + AI processing service
-├── frontend-web/      # Web client (React/NextJS)
-├── frontend-mobile/   # Mobile app (React Native)
-├── database/          # Database schema, migration scripts
-└── docs/              # UML diagrams, SRS, design documents
-```
+├── backend-python/        # Backend chính – FastAPI
+│   ├── app/
+│   │   ├── main.py
+│   │   ├── database.py
+│   │   ├── models/
+│   │   ├── schemas/
+│   │   ├── services/
+│   │   ├── security/
+│   │   └── __init__.py
+│   └── requirements.txt
+│
+├── frontend/              # Frontend web – Next.js + TailwindCSS
+│   ├── app/
+│   ├── components/
+│   ├── public/
+│   ├── services/
+│   └── utils/
+│
+├── ai-service/            # Python AI module (NLP, ML…)
+│   ├── app/
+│   ├── models/
+│   ├── services/
+│   └── tasks/
+│
+├── database/              # SQL schema + seeds
+│   ├── migrations/
+│   └── seeds/
+│
+└── docs/                  # UML, SRS, API docs, thiết kế hệ thống
+    ├── requirements/
+    ├── design/
+    ├── api/
+    └── testing/
 
----
+🛠️ Technologies Used
 
-## 🛠️ Technologies Used
+Backend: Python FastAPI, SQLAlchemy, JWT
 
-* **Backend:** Java Spring Boot, MySQL, Redis
-* **Frontend Web:** ReactJS / NextJS
-* **Mobile App:** React Native
-* **AI Service:** Python, FastAPI, Celery, NLP models
-* **Database:** MySQL / PostgreSQL + Redis cache
-* **Tools:** Docker, Git, GitHub
+Frontend Web: Next.js (React), TypeScript, TailwindCSS
 
----
+AI Service: Python + FastAPI, NLP/ML models
 
-## 🚀 Setup (Basic)
+Database: MySQL / PostgreSQL
 
-### 1️⃣ Clone project
+Tools: Git, GitHub, Docker (optional)
 
-```
+🚀 Setup (Basic)
+1️⃣ Clone project
 git clone https://github.com/your-username/CNPM.git
 cd CNPM
-```
 
-### 2️⃣ Backend (Spring Boot)
+2️⃣ Backend (FastAPI)
+cd backend-python
+pip install -r requirements.txt
+uvicorn app.main:app --reload
 
-Chạy bằng IDE (IntelliJ/Eclipse) hoặc:
 
-```
-cd backend
-mvn spring-boot:run
-```
+Mặc định chạy tại:
 
-### 3️⃣ Frontend Web
+http://127.0.0.1:8000
+http://127.0.0.1:8000/docs   # Swagger UI
 
-```
-cd frontend-web
+3️⃣ Frontend Web (Next.js)
+cd frontend
 npm install
-npm start
-```
+npm run dev
 
-### 4️⃣ AI Service
 
-```
+Chạy tại:
+
+http://localhost:3000
+
+4️⃣ AI Service (nếu sử dụng)
 cd ai-service
 pip install -r requirements.txt
-uvicorn main:app --reload
-```
+uvicorn app.main:app --reload
 
----
+📌 Project Status
 
-## 📌 Project Status
+ Tạo cấu trúc dự án
 
-* [x] Project structure initialized
-* [ ] Backend development
-* [ ] Frontend web development
-* [ ] AI service integration
-* [ ] Mobile app development
-* [ ] Documentation
+ Backend FastAPI chạy đăng ký / đăng nhập
 
----
+ Frontend kết nối với backend
 
-## 👥 Authors
+ Thiết kế bảng dữ liệu môn học, syllabus
 
-Project for **Course: CNPM**
-University: *University of Transport Ho Chi Minh City*
-Members: *Update later*
+ Chức năng quản lý syllabus
 
----
+ Tích hợp AI
 
-## 📄 License
+ Viết tài liệu đầy đủ
 
-This project is for educational purposes.
+👥 Authors
 
----
+Course: Công Nghệ Phần Mềm – UT HCMC
+Members: (Cập nhật sau)
+
+📄 License
+
+Dự án phục vụ mục đích học tập.
