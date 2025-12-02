@@ -80,7 +80,7 @@ uvicorn main:app --reload
 ## 👥 Authors
 
 Project for **Course: CNPM**
-University: *Your University Here*
+University: *University of Transport Ho Chi Minh City*
 Members: *Update later*
 
 ---
