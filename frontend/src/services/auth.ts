@@ -14,3 +14,14 @@ export async function registerUser(data: {
     const result = await res.json();
     return result;
 }
+export async function loginUser(data: any) {
+  const res = await fetch("http://localhost:8000/auth/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+
+  return res.json();
+}
