@@ -1,6 +1,6 @@
 import "./globals.css";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+
 
 export const metadata = {
   title: "SMD – Syllabus Management",
@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="pt-20 pb-16"> {/* chừa chỗ cho navbar + footer */}
           {children}
         </div>
-        <Footer />
+        
       </body>
     </html>
   );
