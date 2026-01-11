@@ -6,6 +6,8 @@ from app.database import Base, engine, SessionLocal
 from app.schemas.auth import RegisterRequest, LoginRequest, ApiResponse, LoginResponse
 from app.services.auth_service import register_user, login_user
 
+from app.routers import workflow_router
+
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
@@ -19,6 +21,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 # -----------------------
+
+app.include_router(workflow_router.router)
 
 def get_db():
     db = SessionLocal()
